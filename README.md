@@ -14,6 +14,36 @@ Following features are supported in the Payment link JavaScript SDK:
 
 To get started with Payment Link, visit our [Developer Guide](https://devguide.payu.in/payment-links/payu-payment-links-api-integration)
 
+# Table of Contents
+ 1. [Getting Started](#getting-started)
+ 2. [Installation](#installation)
+
+## Getting Started
+
+Please follow the [installation](#installation) instruction and execute the following JS code:
+
+```javascript
+var HubToken = require('hub_token');
+
+var defaultClient = HubToken.ApiClient.instance;
+// Configure OAuth2 access token for authorization: OAuth2
+var OAuth2 = defaultClient.authentications['OAuth2'];
+OAuth2.accessToken = "YOUR ACCESS TOKEN"
+
+var api = new HubToken.PaymentLinkApi()
+var id = "id_example"; // {String} 
+var mid = "mid_example"; // {String} merchant identifier
+var statusOrExpiryDTO = new HubToken.StatusOrExpiryDTO(); // {StatusOrExpiryDTO} 
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.changeStatusOrExpiry(id, mid, statusOrExpiryDTO, callback);
+
+```
 ## Installation
 
 ### For [Node.js](https://nodejs.org/)
@@ -98,34 +128,6 @@ module: {
   ]
 }
 ```
-
-## Getting Started
-
-Please follow the [installation](#installation) instruction and execute the following JS code:
-
-```javascript
-var HubToken = require('hub_token');
-
-var defaultClient = HubToken.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-var OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = "YOUR ACCESS TOKEN"
-
-var api = new HubToken.PaymentLinkApi()
-var id = "id_example"; // {String} 
-var mid = "mid_example"; // {String} merchant identifier
-var statusOrExpiryDTO = new HubToken.StatusOrExpiryDTO(); // {StatusOrExpiryDTO} 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.changeStatusOrExpiry(id, mid, statusOrExpiryDTO, callback);
-
-```
-
 ## Documentation for API Endpoints
 
 All URIs are relative to *http://localhost:8087*
