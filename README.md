@@ -17,6 +17,9 @@ To get started with Payment Link, visit our [Developer Guide](https://devguide.p
 # Table of Contents
  1. [Getting Started](#getting-started)
  2. [Installation](#installation)
+ 3. [Documentation for API Endpoints](#documentation-for-api-endpoints)
+ 4. [Documentation for Models](#documentation-for-models)
+ 5. [Documentation for Authorization](#documentation-for-authorization)
 
 ## Getting Started
 
