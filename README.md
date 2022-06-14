@@ -172,8 +172,8 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: 
 - **Scopes**: 
   - read_payment_links: Grants read access
   - create_payment_links: Grants write access
+  - update_payment_links: Grants update access
 
