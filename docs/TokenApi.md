@@ -21,10 +21,6 @@ Get token
 ```javascript
 import HubToken from 'hub_token';
 let defaultClient = HubToken.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-let OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
 let apiInstance = new HubToken.TokenApi();
 let mid = "mid_example"; // String | merchant identifier
 let clientTokenDTO = new HubToken.ClientTokenDTO(); // ClientTokenDTO | 
